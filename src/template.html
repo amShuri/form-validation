@@ -3,7 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form Validation</title>
   </head>
-  <body></body>
+  <body>
+    <form novalidate autocomplete="off">
+      <label for="mail">*Email: </label>
+      <input
+        type="email"
+        name="email"
+        id="mail"
+        minlength="6"
+        placeholder="address@email.com"
+        required
+      />
+      <span class="error"></span>
+
+      <label for="country">*Country: </label>
+      <input
+        type="text"
+        name="country"
+        id="country"
+        minlength="4"
+        placeholder="Sweden"
+        required
+      />
+      <span class="error"></span>
+
+      <label for="zip-code">*Zip Code: </label>
+      <input
+        type="tel"
+        name="zip-code"
+        id="zip-code"
+        minlength="4"
+        placeholder="1234"
+        required
+      />
+      <span class="error"></span>
+
+      <label for="password">*Password: </label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        minlength="4"
+        placeholder="****"
+        required
+      />
+      <span class="error"></span>
+
+      <label for="confirm-password">*Confirm Password: </label>
+      <input
+        type="password"
+        name="confirm-password"
+        id="confirm-password"
+        minlength="4"
+        placeholder="****"
+        required
+      />
+      <span class="error"></span>
+
+      <button type="submit">Submit</button>
+    </form>
+    <span class="error"></span>
+  </body>
 </html>

@@ -1,0 +1,38 @@
+button,
+label,
+label + input {
+  display: block;
+}
+
+form label:not(:first-child) {
+  margin-top: 1em;
+}
+
+button {
+  margin: 1em 0;
+}
+
+input {
+  font-family: inherit;
+}
+
+input:valid {
+  border: 2px solid rgb(34, 160, 34);
+}
+
+input:has(+ span.error.active) {
+  border: 2px solid #900;
+}
+
+.error {
+  display: block;
+  font-size: 0.9em;
+  margin-top: 0.2em;
+  padding: 0.3em;
+  width: max-content;
+}
+
+.error.active {
+  background-color: #fdd;
+  border: 1px solid rgb(136, 91, 91);
+}
